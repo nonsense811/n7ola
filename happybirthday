@@ -178,7 +178,7 @@
 </head>
 <body class="dark"> <!-- Add dark class here to start with the dark theme -->
   <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
-  <audio id="music" src="https://www.bensound.com/bensound-music/bensound-happyrock.mp3" autoplay></audio>
+  <audio id="music" src="https://www.bensound.com/bensound-music/bensound-happyrock.mp3" autoplay muted></audio>
   <canvas id="confetti"></canvas>
   <div class="floating-hearts" id="hearts"></div>
   <div class="pet" id="pet">🐱</div>
@@ -282,6 +282,7 @@
       letter.classList.remove('hidden');
       setTimeout(() => letter.classList.add('show'), 10);
       fireConfetti();
+      music.muted = false; // Unmute audio
       music.play();
       setTimeout(() => {
         typeWriterEffect(`Hey ${randomName},\n\nWishing you a year full of joy, success, and love! Enjoy every moment today because it’s YOUR special day! 💖💫\n\nTy mli konti m3aya o mndmtx eni 3rftk lyoma kbrti 3am o rbi ydom hadi l3oxra libinatna o y5likkkkk lya 💕\n\nMay all your dreams come true and may your life be filled with happiness and peace! 🥀🎉`, 0);
